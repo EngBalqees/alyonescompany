@@ -31,7 +31,7 @@ function Home() {
         
         <>
             <main>
-                <div className="slider">
+                <div className="slider" >
                     <div className="container">
                     <DotSlider slides={slides} />
                     </div>

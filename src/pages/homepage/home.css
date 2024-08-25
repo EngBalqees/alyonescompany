@@ -18,7 +18,7 @@ body {
 }
 
 .slider{
-    background-image: url('slider.jpg');
+    background-image: url('/public/slider.jpg');
     z-index: 9;
     height:700px;
     background-size: cover;
@@ -82,7 +82,7 @@ body {
 }
 .jour{
     width: 100%;
-    background-image: url('background.jpg');
+    background-image: url('/public/background.jpg');
     margin-bottom: 45px;
 }
 .jour .row{
