@@ -2,72 +2,13 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  text-align: center;
-  margin-bottom: 10px;
+  text-align: center; 
 }
 
 .container {
   margin: auto;
   width: 80%;
 }
-
-.top1 {
-  background: #fafafa;
-  border-top: 3px solid #1cbbb4;
-  display: flex;
-  flex-direction: column;
-}
-
-.top1 .container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.contacts {
-  width: fit-content;
-
-}
-
-.contacts ul {
-  display: flex;
-  gap: 20px;
-}
-
-.contacts ul li {
-  list-style: none;
-  border-right: 1px solid #ebebeb;
-  font-size: 12px;
-}
-
-.social {
-  display: flex;
-  width: fit-content;
-  border-left: 1px rgb(158, 158, 158);
-
-}
-
-.social .socialmedia ul {
-  display: flex;
-  gap: 2px;
-}
-
-.social .socialmedia ul li {
-  list-style: none;
-}
-
-.socialmedia img {
-  height: 25px;
-  width: 20px;
-}
-.socialmedia a :hover{
-  background-color: #1cbbb4;
-}
-.social .language {
-  border-right: 1px solid #ebebeb;
-  border-left: 1px solid #ebebeb;
-  width: 50px;
-}
-
 .dropdown {
   position: relative;
   display: inline-block;
@@ -112,12 +53,11 @@ header {
   background-color: white;
   position: relative;
   margin: auto;
-  padding: 10px 20px;
   width: 100%;
+  border-top: 10px #e7a83b;
 }
 
 .top2 .container {
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -132,8 +72,8 @@ header {
 }
 
 .siteicon img {
-  width: 200px;
-  height: 100px;
+  width: 150px;
+  height: 130px;
 }
 
 .navbar {
@@ -158,8 +98,6 @@ header {
 .navbar ul li {
   list-style: none;
   float: right !important;
-  padding-left: 25px;
-  padding-right: 0px;
   margin-left: 0px;
   margin-right: 50px;
 }
@@ -168,15 +106,13 @@ header {
   display: block;
   text-decoration: none;
   background: none;
-  font-family: 'Crown';
-  font-weight: 500;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: 700;
   font-size: 15px;
   line-height: 20px;
-  color: #8c8c8c;
+  color: #fac000;
   padding: 5px 0px 5px 0;
-  border: none;
-  text-align: left;
-  text-transform: none;
+ 
 }
 
 .navbar ul li a>:active {

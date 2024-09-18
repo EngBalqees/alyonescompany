@@ -1,47 +1,64 @@
-import React, { useState } from 'react';
-import './slider.css';
+// ImageSlider.js
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../slider/slider.css";
 
-const DotSlider = ({ slides }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
+const ImageSlider = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fade: true,
   };
 
+  const images = [
+    {
+      src: "1.jpg",
+      caption: "أجمل الوجهات السياحية في العالم"
+
+    },
+    {
+      src: "2.jpg",
+      caption: "اختر رحلتك وخلي صيفك وكيفك علينا"
+
+    },
+    {
+      src: "3.jpg",
+      caption: "رحلة إيمانية مميزة"
+
+    },
+    {
+      src: "4.jpg",
+      caption: "فرصة زيارة أجمل المدن السياحية"
+
+
+    },
+    {
+      src: "5.jpg",
+      caption: "استمتع برحلة الأحلام"
+
+    }
+  ];
+
   return (
-    <div className="dot-slider">
-      <div className="slides">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`slide ${index === currentSlide ? 'active' : ''}`}
-            style={index === currentSlide ? slide.style : {}}
-          >
-             {Array.isArray(slide.title)
-              ? slide.title.map((line, idx) => <h4 key={idx}>{line}</h4>)
-              : <a href=''><h4>{slide.title}</h4></a>}
-
-            {Array.isArray(slide.subtitle)
-              ? slide.subtitle.map((line, idx) => <h2 key={idx}>{line}</h2>)
-              :<a href=''> <h2>{slide.subtitle}</h2></a>}
-
-            {Array.isArray(slide.description)
-              ? slide.description.map((line, idx) => <p key={idx}>{line}</p>)
-              : <p>{slide.description}</p>}
+    <div className="slider-container">
+      <Slider {...settings}>
+        {images.map((image, index) => (
+          <div key={index} className="slide">
+            <img src={image.src} alt={`Slide ${index + 1}`} className="slide-image"/>
+            <div className="caption">{image.caption}</div> {/* Caption text */}
           </div>
         ))}
-      </div>
-      <div className="dots">
-        {slides.map((_, index) => (
-          <span
-            key={index}
-            className={`dot ${index === currentSlide ? 'active' : ''}`}
-            onClick={() => goToSlide(index)}
-          ></span>
-        ))}
-      </div>
+      </Slider>
     </div>
   );
 };
 
-export default DotSlider;
+export default ImageSlider;
+

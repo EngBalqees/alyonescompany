@@ -1,142 +1,114 @@
-footer{
+footer {
     bottom: 0;
     left: 0;
     text-align: center;
     width: 100%;
 }
-.topfooter{
-    background: #252525;
-    border-top: 4px solid #1cbbb4;
-    padding-top: 35px;
-    padding-bottom: 45px;
+
+.topfooter {
+    background: #efefef;
+    border-top: 4px solid #e99713;
+    padding-top: 15px;
+    padding-bottom: 15px;
     color: #959595;
 }
-.topfooter .container{
+
+.topfooter .container {
     display: flex;
     gap: 30px;
+    justify-content: space-between;
+    margin: auto;
+    padding: 10px;
 }
-.topfooter .row{
+
+.topfooter .row {
     position: relative;
-    padding-top: 15px;
-    min-width: 100px;
-    padding-right: 15px;
-    padding-left: 15px;
+    width: 50%;
+    padding-top: 1px;
+    padding-left: 25px;
     display: flex;
     flex-direction: column;
     gap: 8px;
-    justify-content: flex-start; 
-    text-align: left;
 }
-.topfooter img{
-    width: 200px;
-    height: 100%;
-    
+.topfooter .row a{
+    width: fit-content;
 }
-.topfooter p{
-    color:#959595;
+.topfooter img {
+    width: 150px;
+    height: 150%;
+}
+
+.topfooter p {
+    color: #959595;
     font: 14px 'Raleway', Arial, Helvetica, sans-serif;
     text-align: left;
 }
-.topfooter h2{
-    color:#959595;
+
+.topfooter h2 {
+    color: #959595;
     font: 24px 'Raleway', Arial, Helvetica, sans-serif;
     text-align: left;
 }
-.topfooter .tel{
-    color: #1cbbb4;
-    text-decoration:none;
-    font-size: 30px;
-    outline: none;
-}
-.topfooter .email{
-    color: #555555;
-    text-decoration:underline;
-    font: 14px 'Raleway', Arial, Helvetica, sans-serif;
-}
-.topfooter .social-icons{
-    position: relative;
-}
-.social-icons ul {
-    display: flex;
-    margin: 0 4px 4px 0;
-    float: left;
-    gap:3px;
-}
-.social-icons ul li {
-    display: flex;
+
+.topfooter .tel {
+    color: #f3a20c;
     text-decoration: none;
-    background-color: #525151;
-    border: 1px solid rgb(78, 75, 75);
-    align-content: center;
-}
-.social-icons img{
-    height: 30px;
-    width: 25px;
-    padding: 4px;
-}
-.social-icons ul li  :hover{
-    background-color: #428bca;
-    text-decoration: none;
-}
-.reviews{
-    width: 60%;
-}
-.row1 .twit{
-    color: #959595;
-    border-top: 1px solid #363636;
-    padding: 2px 0;
-}
-.twit .date {
-    color: #464646;
-    font-size: 12px;
-    text-align: left;
-}
-.row input{
-    width: 100%;
-    height: auto;
-    font-size: 14px;
-    line-height: 20px;
-    color: #555555;
-    background-color: black;
-    border: 1px solid #343434;
-    margin: 0;
-    padding: 10px 50px 10px 10px;
-}
-.row button{
-    display: inline-block;
-    color: #fff;
-    border: none;
-    font-size: 12px;
-    line-height: 20px;
-    font-weight: 700;
-    padding: 6px 20px;
-    text-decoration: none;
-    border-radius: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    text-transform: uppercase;
-    background: #fb000d;
-    position: relative;
-    text-align: center;
-    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2) inset;
-    margin-top: 15px;
+    font-size: 20px;
 }
 
-footer .alrights{
-    background: #00a99d;
-    padding-top: 29px;
-    padding-bottom: 29px;
+.topfooter .email {
+    color: #555555;
+    text-decoration: underline;
+    font: 14px 'Raleway', Arial, Helvetica, sans-serif;
+}
+
+.contact-form {
+    width: 50%;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.contact-form div {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #f4a20a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer .alrights {
+    background: #e99d06;
+    padding: 10px;
     color: #fff;
     font-size: 13px;
 }
-.alrights .container{
+
+.alrights .container {
     position: relative;
     min-width: 320px;
-    text-align: right;
 }
-.container a{
+
+.container a {
     text-decoration: none;
     color: white;
-    padding-left: 3px;
-    padding-right: 3px;
 }

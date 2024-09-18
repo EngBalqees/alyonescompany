@@ -13,231 +13,94 @@ body {
     gap: 80px;
 }
 
-.home .container {
-
-}
-
-.slider{
-    background-image: url('/public/slider.jpg');
-    z-index: 9;
-    height:700px;
-    background-size: cover;
-}
-.slider .container{
-    width: 30%;
-    background: rgb(255 255 255 / 80%);
-    height: 700px;
-   margin-right: 0;
-
-}
-.why{
-    padding-top: 20px;
-    padding-bottom: 30px;
-}
-.why .row{
-    display: flex;
-    padding-top: 12px;
-    gap: 10px;
-    justify-content: space-between;
-}
-.why .item{
-    width: 20%;
-    padding: 5px 7px;
-    
-}
-.item img{
-    padding-top: 9px;
-}
-.item img:hover{
-    color: #1cbbb4;
-}
-.item h4{
-    font-family: 'Crown';
-    font-size: 21px;
-    color: #464646;
-  
-    padding-bottom: 5px;
-}
-.item span{
-    color: #959595;
-}
-.why h2{
-    font-family: 'Crown';
-    font-weight: 600;
-    font-size: 42px;
-    color: #464646;
-    background: none;
-    line-height: 1.1;
-    padding: 20px 0 20px;
-    margin: 0 0 10px 0;
-    position: relative;
-    text-align: center;
-    text-transform: uppercase;
-}
-.why p{
-    text-align: center;
-    font-size: 18px;
-    color: #959595;
-    padding-bottom: 15px;
-}
-.jour{
+.home .slider {
+    margin: auto;
     width: 100%;
-    background-image: url('/public/background.jpg');
-    margin-bottom: 45px;
 }
-.jour .row{
+.why-us{
+    padding-top: 35px;
+    padding-bottom: 45px;
+}
+.why-us h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    color: #635b5b;
+}
+.card-grid {
     display: flex;
-    padding: 30px 15px;
-    justify-content: space-between;
-    text-align: right;
-}
-.jour .btn{
-    margin-top: 80px;
-    display: block;
-    color: #fff;
-    border: none;
-    font-size: 14px;
-    padding: 5px 25px;
-    width: 100px;
-    height: 40px;
-    font-weight: 700;
-    text-transform: uppercase;
-    background: #fb000d;
-    text-align: center;
-}
-.jour  .jourdetails h1{
-    font-size: 38px;
-    font-weight: 800;
-    color: #FFCB05;
-}
-.jourdetails span{
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
-}
-.jourdetails p{
-    padding-top: 10px;
-    color: #FFCB05;
-    font-size: 18px;
-}
-.journies{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+.journies {
     margin-top: 20px;
     margin-bottom: 70px;
 }
-.journies .container{
+
+.journies .container {
     padding: 25px;
     margin-right: auto;
     margin-left: auto;
 }
-.about {
-    background-image: url('background.jpg');
-}
 
-.about .container {
-    padding: 20px 10px;
-    padding-bottom: 2px;
-    display: flex;
-    gap: 15px;
-}
-
-.about img {
-    width: 90%;
-    height: 60%;
-    padding-top: 200px;
-}
-
-.about .content {
-    padding-bottom: 30px;
-}
-
-.content .text {
-    text-align: right;
-}
-
-.text h1 {
-    color: white;
-    font-size: 42px;
-    text-transform: uppercase;
-}
-
-.text span {
-    color: white;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.text .sm {
-    padding-top: 40px;
-}
-
-.text p {
-    color: white;
-    font-size: 14px;
-
-}
-
-.lines .distance {
-    color: #f4f1f1;
-}
-.distance .ditext{
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
-}
-
-.distance p{
+.journies span {
     font-size: 15px;
-    font-weight: 700; 
+    color: #f0ad49;
+    background-color: #eddabe;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px #9a958c;
 }
 
-.distance .line {
-    background: #6abeb7;
-    left: 0;
-    top: 0;
-    width: 620px;
-    height: 14px;
+.journies h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    color: #635b5b;
+
 }
 
-.what {
-    position: relative;
-    padding-top: 20px;
-    padding-bottom: 50px;
-    margin-bottom: 50px;
-    background: #fafafa;
+.journies h4 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 28px;
+    color: #9a958c;
+
 }
 
-.what .container {
-    display: flex;
-    gap: 15px;
-    width: 80%;
-    padding-left: 50px;
-    padding-right: 50px;
+.item-list {
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
 }
 
-.what .what1 {
-    width: 450px;
-    padding-left: 45px;
+.item {
+    padding: 10px;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    border-radius: 5px;
 }
 
-.what1 h2 {
-    font-family: 'Crown';
-    font-weight: 600;
-    font-size: 38px;
-    color: #464646;
-    background: none;
-    line-height: 1.1;
-    padding: 20px 0 20px;
-    margin: 0 0 10px 0;
-    position: relative;
-    text-align: center;
+/* Collapsed state (only show first 3 items) */
+.collapsed {
+    max-height: 440px;
+    /* Adjust based on number of items visible (e.g. 3 items) */
 }
 
-.what1 p {
-    border-left: 0px solid #1cbbb4;
-    border-right: 3px solid #1cbbb4;
-    padding: 2px 20px 2px 20px;
-    margin-bottom: 0;
-    font-size: 14px;
-    color: #959595;
-    text-align: right;
+/* Expanded state (show all items) */
+.expanded {
+    max-height: 850px;
+    /* Adjust max height for the entire list */
+}
+
+/* Show More/Show Less button */
+.toggle-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #f0ad49;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle-button:hover {
+    background-color: #ff9900;
 }
