@@ -1,6 +1,5 @@
 import React from "react";
 import "../footer/footer.css";
-import MapIframe from "../map/map.JSX";
 function Footer() {
     return (
         <>
