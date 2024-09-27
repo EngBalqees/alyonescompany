@@ -4,14 +4,14 @@ function Footer() {
     return (
         <>
             <footer>
-                <div className="topfooter">
+                <div id="contact" className="topfooter">
                     <div className="container">
                         <div className="row">
-                            <a href=""><img src="logo.png" /></a>
+                                <img src="logo.png" />
                             <p>رحلات مميزة إلى أجمل الوجهات السياحية حول العالم</p>
                             <a className="tel">05973003718</a>
                             <a className="tel">0599846966</a>
-                           
+
                         </div>
                         <div className="contact-form">
                             <h4>تواصل معنا</h4>
@@ -24,7 +24,7 @@ function Footer() {
                                     />
                                 </div>
                                 <div>
-                                    <label>الإيميل</label>
+                                    <label>الموضوع</label>
                                     <input
                                         type="email"
                                         name="email"
@@ -36,7 +36,7 @@ function Footer() {
                                         name="message"
                                     />
                                 </div>
-                                <button >Send</button>
+                                <button >أرسل</button>
                             </form>
 
                         </div>

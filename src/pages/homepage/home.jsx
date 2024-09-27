@@ -8,6 +8,19 @@ function Home() {
     const toggleExpand = () => {
         setIsExpanded(!isExpanded);
     };
+    const toggleExpand1 = () => {
+        setIsExpanded1(!isExpanded1);
+    };
+    const toggleExpand2 = () => {
+        setIsExpanded2(!isExpanded2);
+    };
+    const toggleExpand3 = () => {
+        setIsExpanded3(!isExpanded3);
+    };
+    const [isExpanded, setIsExpanded] = useState(false);
+    const [isExpanded1, setIsExpanded1] = useState(false);
+    const [isExpanded2, setIsExpanded2] = useState(false);
+    const [isExpanded3, setIsExpanded3] = useState(false);
     const offers1 = [
         {
             image: "Fethiye.jpg",
@@ -121,106 +134,116 @@ function Home() {
         },
 
     ];
-    const [isExpanded, setIsExpanded] = useState(false);
+
     const benefits = [
-        { title: "بكجات أسعار شاملة" },
-        { title: "جولات سياحية داخلية"},
-        { title: "مندوب مرافق خلال الرحلة"},
-        { title: "اختيار أفضل الفنادق " },
-        { title: "اسعار خاصة للأطفال" },
+        {
+            image: "cash-flow.png",
+            title: "بكجات أسعار شاملة"
+        },
+        { image: "surf-van.gif", title: "جولات سياحية داخلية" },
+        { image: "travel.png", title: "مندوب مرافق خلال الرحلة" },
+        { image: "hotel.gif", title: "اختيار أفضل الفنادق " },
+        { image: "give-money.png", title: "اسعار خاصة للأطفال" },
     ];
     return (
 
         <>
             <main>
-                <div className="slider">
+                <div id="slider" className="slider">
                     <ImageSlider />
                 </div>
-                <div className="why-us">
+                <div id="why" className="why-us">
                     <div className="container">
                         <h2>لماذا نحن الأفضل</h2>
                         <div className="card-grid">
                             {benefits.map((benefit, index) => (
                                 <BenefitCard key={index}
+                                    image={benefit.image}
                                     title={benefit.title}
-                                 
                                 />
                             ))}
                         </div>
                     </div>
                 </div>
 
-                <div className="journies">
+                <div id="journies" className="journies">
                     <div className="container">
                         <span>استكشف معنا</span>
                         <h2>الرحلات السياحية</h2>
-                        <h4>رحلات تركيا</h4>
-                        <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }} className={`item-list ${isExpanded ? "expanded" : "collapsed"}`}>
-                            {offers1.map((offer, index) => (
-                                <OfferCard
-                                    key={index}
-                                    image={offer.image}
-                                    title={offer.title}
-                                    description={offer.description}
-                                    offer={offer.offer}
-                                />
-                            ))}
+                        <div className="card-content">
+                            <h4>رحلات تركيا</h4>
+                            <div className={`item-list ${isExpanded ? "expanded" : "collapsed"}`}>
+                                {offers1.map((offer, index) => (
+                                    <OfferCard
+                                        key={index}
+                                        image={offer.image}
+                                        title={offer.title}
+                                        description={offer.description}
+                                        offer={offer.offer}
+                                    />
+                                ))}
+                            </div>
+                            {/* Toggle button */}
+                            <button onClick={toggleExpand} className="toggle-button">
+                                {isExpanded ? "عرض أقل" : "عرض المزيد"}
+                            </button>
                         </div>
-                        {/* Toggle button */}
-                        <button onClick={toggleExpand} className="toggle-button">
-                            {isExpanded ? "Show Less" : "Show More"}
-                        </button>
-                        <h4>رحلات مصر</h4>
-                        <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }} className={`item-list ${isExpanded ? "expanded" : "collapsed"}`}>
-                            {offers2.map((offer, index) => (
-                                <OfferCard
-                                    key={index}
-                                    image={offer.image}
-                                    title={offer.title}
-                                    description={offer.description}
-                                    offer={offer.offer}
-                                />
-                            ))}
+                        <div className="card-content">
+                            <h4>رحلات مصر</h4>
+                            <div className={`item-list ${isExpanded1 ? "expanded" : "collapsed"}`}>
+                                {offers2.map((offer, index) => (
+                                    <OfferCard
+                                        key={index}
+                                        image={offer.image}
+                                        title={offer.title}
+                                        description={offer.description}
+                                        offer={offer.offer}
+                                    />
+                                ))}
+                            </div>
+                            {/* Toggle button */}
+                            <button onClick={toggleExpand1} className="toggle-button">
+                                {isExpanded1 ? "عرض أقل" : "عرض المزيد"}
+                            </button>
                         </div>
-                        {/* Toggle button */}
-                        <button onClick={toggleExpand} className="toggle-button">
-                            {isExpanded ? "Show Less" : "Show More"}
-                        </button>
-                        <h4>رحلات الأردن</h4>
-                        <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }} className={`item-list ${isExpanded ? "expanded" : "collapsed"}`}>
-                            {offers3.map((offer, index) => (
-                                <OfferCard
-                                    key={index}
-                                    image={offer.image}
-                                    title={offer.title}
-                                    description={offer.description}
-                                    offer={offer.offer}
-                                />
-                            ))}
+                        <div className="card-content">
+                            <h4>رحلات الأردن</h4>
+                            <div className={`item-list ${isExpanded2 ? "expanded" : "collapsed"}`}>
+                                {offers3.map((offer, index) => (
+                                    <OfferCard
+                                        key={index}
+                                        image={offer.image}
+                                        title={offer.title}
+                                        description={offer.description}
+                                        offer={offer.offer}
+                                    />
+                                ))}
+                            </div>
+                            {/* Toggle button */}
+                            <button onClick={toggleExpand2} className="toggle-button">
+                                {isExpanded2 ? "عرض أقل" : "عرض المزيد"}
+                            </button>
                         </div>
-                        {/* Toggle button */}
-                        <button onClick={toggleExpand} className="toggle-button">
-                            {isExpanded ? "Show Less" : "Show More"}
-                        </button>
-                        <h4>رحلات العمرة</h4>
-                        <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }} className={`item-list ${isExpanded ? "expanded" : "collapsed"}`}>
-                            {offers4.map((offer, index) => (
-                                <OfferCard
-                                    key={index}
-                                    image={offer.image}
-                                    title={offer.title}
-                                    description={offer.description}
-                                    offer={offer.offer}
-                                />
-                            ))}
+                        <div className="card-content" >
+                            <h4>رحلات العمرة</h4>
+                            <div className={`item-list ${isExpanded3 ? "expanded" : "collapsed"}`}>
+                                {offers4.map((offer, index) => (
+                                    <OfferCard
+                                        key={index}
+                                        image={offer.image}
+                                        title={offer.title}
+                                        description={offer.description}
+                                        offer={offer.offer}
+                                    />
+                                ))}
+                            </div>
+                            {/* Toggle button */}
+                            <button onClick={toggleExpand3} className="toggle-button">
+                                {isExpanded3 ? "عرض أقل" : "عرض المزيد"}
+                            </button>
                         </div>
-                        {/* Toggle button */}
-                        <button onClick={toggleExpand} className="toggle-button">
-                            {isExpanded ? "Show Less" : "Show More"}
-                        </button>
                     </div>
                 </div>
-
             </main >
         </>
     )

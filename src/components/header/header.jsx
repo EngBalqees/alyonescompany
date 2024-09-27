@@ -1,40 +1,41 @@
 import React, { useState } from "react";
 import "../header/header.css"
 function Header() {
-    const [open, setOpen] = React.useState(false);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-    const handleOpen = () => {
-        setOpen(!open);
+    const toggleSidebar = () => {
+        setIsSidebarOpen(!isSidebarOpen);
     };
-    const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
-    const handleMenuItemClick = (event) => {
-        console.log(`You selected ${event.target.textContent}`);
-        setIsOpen(false); // Close the menu after selection
-    };
     return (
         <>
             <header>
-                <div className="top2">
-                    <div className="container">
-                        <div className="siteicon">
-                            <a href="">
-                                <img src="logo.png" />
-                            </a>
-                        </div>
-                        <div className="navbar">
-                            <ul>
-                                <li><a href="">اتصل بنا</a></li>
-                                <li><a>الرحلات السياحية</a></li>
-                                <li><a href="">من نحن</a></li>
-                                <li><a href="">الصفحة الرئيسية</a></li>
-                            </ul>
-
-                        </div>
+                <div className="container">
+                    <div className="siteicon">
+                        <a href="">
+                            <img src="logo.png" />
+                        </a>
                     </div>
+                    <div className={`nav-menu ${isSidebarOpen ? 'open' : ''}`}>
+                        <span className="close-btn" onClick={toggleSidebar}>&times;</span>
+                        <ul>
+                            <li><a href="#contact">اتصل بنا</a></li>
+                            <li><a href="#journies">الرحلات السياحية</a></li>
+                            <li><a href="#why">لماذا نحن</a></li>
+                            <li><a href="#slider">الصفحة الرئيسية</a></li>
+                            <li><a href="#">تسجيل الدخول</a></li>
+                        </ul>
+                    </div>
+
+                    <div className="menu-icon" onClick={toggleSidebar}>
+                        <span>&#9776;</span>
+                    </div>
+
+                    {/* Only show overlay on mobile when sidebar is open */}
+                    {isSidebarOpen && window.innerWidth <= 768 && (
+                        <div className="overlay" onClick={toggleSidebar}></div>
+                    )}
+
 
                 </div>
             </header>

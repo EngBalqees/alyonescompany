@@ -6,17 +6,18 @@ import React from 'react'
 import Header from './components/header/header';
 import Footer from './components/footer/footer.jsx';
 import Home from './pages/homepage/home.jsx'
-
+import { useMediaQuery } from 'react-responsive';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
-  const [count, setCount] = useState(0)
-
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   return (
-    <>
-     <Header />
+    <div className={isMobile ? 'mobile-layout' : 'desktop-layout'}>
+
+      <Header />
       <Home />
       <Footer />
-   
-    </>
+
+    </div>
   )
 }
 
